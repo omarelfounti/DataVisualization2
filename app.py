@@ -21,5 +21,5 @@ df = pd.DataFrame({
     'Electricity Price (€/MWh)': electricity_price.round(2)
 })
 
-# Guardar como CSV
+
 df.to_csv('weather_electricity.csv', index=False)
