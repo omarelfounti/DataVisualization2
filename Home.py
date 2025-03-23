@@ -1,20 +1,18 @@
 import streamlit as st
-from Analysis import show_analysis
 from Dashboard import show_dashboard
+from Analysis import show_analysis
 
-st.title("🌦️ Weather vs Electricity Prices")
-st.write("Welcome to the app! Choose a section from the menu below:")
+st.sidebar.title("Options")
+option = st.sidebar.selectbox("Choose a page", ["Home", "Dashboard", "Analysis"])
 
-page = st.selectbox("Select a page", ["Home", "Dashboard", "Analysis"])
-
-if page == "Dashboard":
+if option == "Dashboard":
     show_dashboard()
-elif page == "Analysis":
+elif option == "Analysis":
     show_analysis()
 else:
-    st.write("""
-        This tool helps you understand how temperature, wind speed, and humidity 
-        relate to electricity prices using a fictional dataset for one month.
-    """)
+    st.title("🌦️ Weather vs Electricity Prices")
+    st.write("Welcome to the app! Choose a section from the menu below:")
+
+
 
 
