@@ -11,7 +11,7 @@ elif option == "Analysis":
     show_analysis()
 else:
     st.title("🌦️ Weather vs Electricity Prices")
-    st.write("Welcome to the app! Choose a section from the menu below:")
+    st.write("Welcome to the app! Choose a section from the menu:")
 
 
 
